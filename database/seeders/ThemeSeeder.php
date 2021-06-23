@@ -18,18 +18,33 @@ class ThemeSeeder extends Seeder
         $themes = [
             [
                 'id' => 1,
-                'name' => 'Tst',
+                'name' => 'Theme 1',
                 'theme_id' => null,
             ],
             [
                 'id' => 2,
-                'name' => 'Test-Sub-1',
+                'name' => 'Theme 2',
                 'theme_id' => 1,
             ],
             [
                 'id' => 3,
-                'name' => 'Test-Sub-2',
+                'name' => 'Theme 3',
                 'theme_id' => 1,
+            ],
+            [
+                'id' => 4,
+                'name' => 'Theme 4',
+                'theme_id' => 3,
+            ],
+            [
+                'id' => 5,
+                'name' => 'Theme 5',
+                'theme_id' => 3,
+            ],
+            [
+                'id' => 6,
+                'name' => 'Theme 6',
+                'theme_id' => null,
             ],
         ];
 

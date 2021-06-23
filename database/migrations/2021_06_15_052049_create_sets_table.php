@@ -15,9 +15,9 @@ class CreateSetsTable extends Migration
     {
         Schema::create('sets', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
-            $table->text('set_number');
-            $table->text('picture');
+            $table->string('name');
+            $table->string('set_number');
+            $table->string('picture');
             $table->unsignedBigInteger('theme_id')->nullable();
             $table->foreign('theme_id')->references('id')->on('themes')
 

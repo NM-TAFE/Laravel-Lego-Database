@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Set;
 use App\Models\Theme;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class ThemeController extends Controller
         $themes = Theme::whereNull('theme_id')
             ->with('childrenThemes')
             ->get();
-        return view('themes', compact('themes'));
+        return view('admin.theme.index', compact('themes'));
     }
 
     /**
@@ -29,7 +30,7 @@ class ThemeController extends Controller
     {
         $themes  = Theme::all();
 
-        return view('create', compact('themes'));
+        return view('admin.theme.create', compact('themes'));
     }
 
     /**
@@ -54,7 +55,8 @@ class ThemeController extends Controller
      */
     public function show(Theme $theme)
     {
-        //
+        $sets = Set::all();
+        return view('admin.theme.show ', compact('theme', 'sets'));
     }
 
     /**

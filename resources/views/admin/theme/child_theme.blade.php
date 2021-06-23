@@ -1,5 +1,5 @@
 @if (isset($childTheme))
-    <li>{{ $childTheme->name }}
+    <li><a href="{{route('themes.show',$childTheme)}}" type="submit">{{ $childTheme->name }}</a>
         @if ($childTheme->themes)
             <ul>
                 @foreach ($childTheme->themes as $childTheme)
